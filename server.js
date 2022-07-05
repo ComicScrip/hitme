@@ -12,7 +12,7 @@ app.get('/timeout/:time', (req, res) => {
 
 app.get('/payload', (req, res) => {
   res.send(
-    Array(req.query.items || 10)
+    Array(parseInt(req.query.items || 10, 10))
       .fill()
       .map(() => ({ test: 'test', ...req.query }))
   );
