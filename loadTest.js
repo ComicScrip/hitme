@@ -1,7 +1,8 @@
 import http from 'k6/http';
 
 export default function () {
-  http.get('http://localhost:5000/payload?items=50');
+  http.get('https://hitme.wild-projects.duckdns.org');
+  //http.get('https://hitme.secret-lab.duckdns.org');
 }
 
 export const options = {
