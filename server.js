@@ -2,10 +2,16 @@ const express = require('express');
 
 const app = express();
 
+let count = 0;
+
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.send('ok');
+});
+
+app.get('/count', (req, res) => {
+  res.send(count++);
 });
 
 app.get('/timeout/:time', (req, res) => {
