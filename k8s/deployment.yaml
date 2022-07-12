@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: hitme
+spec: 
+  selector:
+    matchLabels: 
+      app: hitme
+  replicas: 3
+  template: 
+    metadata:
+      labels:
+        app: hitme
+    spec:
+      containers: 
+        - name: hitme
+          image: scrip/hitme
+          ports:
+          - containerPort: 80
