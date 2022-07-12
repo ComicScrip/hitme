@@ -7,7 +7,7 @@ let count = 0;
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send('ok');
+  res.send('okk');
 });
 
 app.get('/count', (req, res) => {
